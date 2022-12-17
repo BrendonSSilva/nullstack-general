@@ -17,25 +17,34 @@ class Home extends Nullstack {
     this.rodadas < 6 ? this.rodadas += 1 : this.rodadas = 1
     this.rodadas === 6 ? this.rodadasCount += 1 : this.rodadasCount += 0
   }
+  putOut() {
+
+  }
+
+  renderTable() {
+    return (
+      <div class='table'>
+        <div>
+          <p>Rodadas: {this.rodadasCount}</p>
+          <p>Jogadas: {this.jogadas}<b>{this.jogadas === 3 && ' - Próximo'}</b></p>
+          <button onclick={this.spin} class='spin'>Girar</button>
+        </div>
+
+        <div>
+          <img src={`${Math.floor(Math.random() * 6 + 1)}.png`} />
+          <img src={`${Math.floor(Math.random() * 6 + 1)}.png`} />
+          <img src={`${Math.floor(Math.random() * 6 + 1)}.png`} />
+          <img src={`${Math.floor(Math.random() * 6 + 1)}.png`} />
+          <img src={`${Math.floor(Math.random() * 6 + 1)}.png`} />
+        </div>
+      </div>
+    )
+  }
 
   render() {
     return (
       <>
-        <div class='table'>
-          <div>
-            <p>Rodadas: {this.rodadasCount}</p>
-            <p>Jogadas: {this.jogadas}<b>{this.jogadas === 3 && ' - Próximo'}</b></p>
-            <button onclick={this.spin} class='spin'>Girar</button>
-          </div>
-
-          <div>
-            <img src={`${Math.floor(Math.random() * 6 + 1)}.png`} />
-            <img src={`${Math.floor(Math.random() * 6 + 1)}.png`} />
-            <img src={`${Math.floor(Math.random() * 6 + 1)}.png`} />
-            <img src={`${Math.floor(Math.random() * 6 + 1)}.png`} />
-            <img src={`${Math.floor(Math.random() * 6 + 1)}.png`} />
-          </div>
-        </div>
+        <Table />
       </>
     )
   }

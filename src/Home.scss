@@ -21,4 +21,20 @@
   p {
     margin: 10px 0;
   }
+
+  .none{
+    display: none;
+  }
+  .function{
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #f63307;
+    color: #fff;
+    cursor: pointer;
+  }
 }

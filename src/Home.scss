@@ -1,40 +1,124 @@
+.all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem 0;
+  text-align: center;
+}
+p{
+  margin: .5rem 0;
+}
+// buttons
+.spin {
+  display: flex;
+  justify-content: center;
+  width: 6rem;
+  margin: 10px auto;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #2358d2;
+  color: #fff;
+  cursor: pointer;
+}
+
+.remove {
+  border: none;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #d22365;
+  color: #fff;
+  cursor: pointer;
+}
+
+.add {
+  border: none;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #23d238;
+  color: #fff;
+  cursor: pointer;
+}
+
+// end buttons
+
 .table {
-  margin-top: 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 
-  .spin {
-    display: flex;
-    justify-content: center;
-    width: 6rem;
-    margin: 10px auto;
-    padding: 15px;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: bold;
-    background-color: #0f0;
-    cursor: pointer;
+  .div1 {
+    margin: 2rem 0 1rem 0;
+
+    .dados {
+      margin: 0 .3rem;
+    }
   }
 
-  p {
-    margin: 10px 0;
-  }
-
-  .none{
+  .none {
     display: none;
   }
-  .function{
+
+  .buttons {
     display: flex;
-    justify-content: center;
-    margin: 10px auto;
-    padding: 15px;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: bold;
-    background-color: #f63307;
-    color: #fff;
-    cursor: pointer;
+    justify-content: space-between;
   }
+}
+
+.all__values {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+
+  @media(max-width:576px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .value {
+    display: flex;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 15px 15px;
+    font-size: 1rem;
+    border: none;
+    color: #d22365;
+    outline: 0;
+  }
+
+  .player {
+    background-color: #2358d2;
+    color: #fff;
+    display: flex;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 15px 15px;
+    font-size: 1rem;
+    border: none;
+    outline: 0;
+  }
+
+  .player::placeholder {
+    color: #ffffff90;
+  }
+}
+.buttonsRA{
+  display: flex;
+  margin: 0 0 .8rem 0;
+}
+a {
+  color: #d22365 !important;
+  text-decoration: underline;
 }
